@@ -23,6 +23,8 @@ config.vm.provision "shell", path: "scriptname.txt"
 
         	 box1.vm.network :forwarded_port, guest: 22, host: 10122, id: "ssh"
 		 
+		 # In the line below, change 1p to ip - comment by Svetlana Gluhova on 2-24-2020
+		 
 		 box1.vm.network :private_network, 1p: "192.168.56.101"
 		 
 		 box1.vm.provider :virtualbox do |v| 
@@ -44,6 +46,8 @@ end
          	
 		box2.vm.network :forwarded_port, guest: 22, host: 10123, id: "ssh"
 		
+		# In the line below, change 1p to ip - comment by Svetlana Gluhova on 2-24-2020
+		
 		box2.vm.network :private_network, 1p: "192.168.56.102"
 
  	   end
@@ -59,6 +63,8 @@ end
          	
 		box3.vm.network :forwarded_port, guest: 22, host: 10124, id: "ssh"
 		
+		# In the line below, change 1p to ip - comment by Svetlana Gluhova on 2-24-2020
+		
 		box3.vm.network :private_network, 1p: "192.168.56.105"
 
  	   end
@@ -66,3 +72,5 @@ end
 end
 
 #Here is a clue. If you find on change, you find them all. Three in total.
+# Found it!  Please see above.  Thank you for the hint.  Posted by Svetlana Gluhova on 2-24-2020
+
