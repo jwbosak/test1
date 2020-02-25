@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
          box2.vm.box="scotch/box"
 
-         box2.vm.network :forwarded_port, guest: 22, host: 10222, id: "ssh"
+         box2.vm.network :forwarded_port, guest: 22, host: 10223, id: "ssh"
  end
 end
 
